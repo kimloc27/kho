@@ -2,53 +2,12 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chúc Mừng Sinh Nhật</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
 
-        .box {
-            background: white;
-            width: 400px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        }
-
-        h1 {
-            color: #ff4e50;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
-        }
-
-        img {
-            width: 150px;
-            margin: 20px 0;
-        }
-
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #ff4e50;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            background: #e63e40;
-        }
-    </style>
+    <!-- Kết nối file CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -59,51 +18,54 @@
     </audio>
 
     <div class="box">
-        <h1>🎉 Chúc Mừng Sinh Nhật 🎂</h1>
+
+        <h1>🎉Chúc Mừng Sinh Nhật🎂</h1>
 
         <!-- Hình bánh sinh nhật -->
         <img src="h2.webp" alt="Bánh sinh nhật">
 
-        <p>Chúc bạn có một ngày thật vui vẻ,</p>
+        <p>Chúc chế có một ngày thật vui vẻ,</p>
         <p>Luôn hạnh phúc và thành công!</p>
 
-        <button class="btn" onclick="alert('Chúc em sinh nhật vui vẻ💐🎂,luôn luôn hạnh phúc😚và thật nhiều sức khoẻ🤭,thành công trong học tập nà🫣làm việc gì cũng suôn sẽ😚')">
+        <!-- Nút mở popup -->
+        <button class="btn" onclick="showPopup()">
             Nhấn vào đây 🎁
         </button>
+
     </div>
-<!-- Thư viện pháo hoa -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-<script>
-    function firework() {
-        var duration = 3 * 1000;
-        var end = Date.now() + duration;
 
-        (function frame() {
-            confetti({
-                particleCount: 5,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0 }
-            });
-            confetti({
-                particleCount: 5,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1 }
-            });
+    <!-- ================= POPUP ================= -->
 
-            if (Date.now() < end) {
-                requestAnimationFrame(frame);
-            }
-        }());
-    }
+    <div class="popup" id="birthdayPopup">
 
-    // Tự động bắn khi mở trang
-    window.onload = function() {
-        firework();
-    };
-</script>
+        <div class="popup-content">
+
+            <h2>💐 Chúc mừng sinh nhật 🎂</h2>
+
+            <p>
+                Chúc chế sinh nhật vui vẻ 💐🎂<br>
+                Luôn luôn hạnh phúc 😚<br>
+                Và thật nhiều sức khoẻ 🤭<br>
+                Thành công trong cuốc sống 🫣<br>
+                Làm việc gì cũng suôn sẻ 😚
+            </p>
+
+            <!-- Nút đóng popup -->
+            <button class="close-btn" onclick="closePopup()">
+                Đóng
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Thư viện pháo hoa -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Kết nối file JavaScript -->
+    <script src="script.js"></script>
+
 </body>
-
 </html>
