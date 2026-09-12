@@ -1,10 +1,18 @@
 /* ================= TRANG CHÍNH ================= */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 50px;
+    padding: 30px 15px;
+    margin: 0;
+
+    /* Đảm bảo vừa màn hình */
+    min-height: 100vh;
 }
 
 
@@ -12,10 +20,16 @@ body {
 
 .box {
     background: white;
-    width: 430px;
+
+    /* Không cố định 400px nữa */
+    width: 100%;
+    max-width: 400px;
+
     margin: auto;
-    padding: 30px;
+    padding: 25px 20px;
+
     border-radius: 20px;
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -24,6 +38,7 @@ body {
 
 h1 {
     color: #ff4e50;
+    font-size: 25px;
 }
 
 
@@ -39,6 +54,7 @@ p {
 
 img {
     width: 150px;
+    max-width: 100%;
     margin: 20px 0;
 }
 
@@ -47,12 +63,19 @@ img {
 
 .btn {
     margin-top: 20px;
-    padding: 10px 20px;
+
+    padding: 12px 20px;
+
     background: #ff4e50;
+
     color: white;
+
     border: none;
+
     border-radius: 10px;
+
     cursor: pointer;
+
     font-size: 16px;
 }
 
@@ -67,6 +90,7 @@ img {
     display: none;
 
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -78,6 +102,8 @@ img {
     justify-content: center;
     align-items: center;
 
+    padding: 15px;
+
     z-index: 999;
 }
 
@@ -87,9 +113,11 @@ img {
 .popup-content {
     background: white;
 
-    width: 350px;
+    /* Tự co trên điện thoại */
+    width: 100%;
+    max-width: 350px;
 
-    padding: 30px;
+    padding: 25px 20px;
 
     border-radius: 20px;
 
@@ -105,6 +133,7 @@ img {
 
 .popup-content h2 {
     color: #ff4e50;
+    font-size: 23px;
 }
 
 
@@ -153,6 +182,46 @@ img {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+
+}
+
+
+/* ================= ĐIỆN THOẠI ================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .box {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    img {
+        width: 130px;
+    }
+
+    .popup-content {
+        max-width: 320px;
+        padding: 22px 15px;
+    }
+
+    .popup-content h2 {
+        font-size: 21px;
+    }
+
+    .popup-content p {
+        font-size: 16px;
     }
 
 }
