@@ -21,9 +21,7 @@ function closePopup() {
 function firework() {
 
     var duration = 3 * 1000;
-
     var end = Date.now() + duration;
-
 
     (function frame() {
 
@@ -36,7 +34,6 @@ function firework() {
             }
         });
 
-
         confetti({
             particleCount: 5,
             angle: 120,
@@ -46,11 +43,8 @@ function firework() {
             }
         });
 
-
         if (Date.now() < end) {
-
             requestAnimationFrame(frame);
-
         }
 
     }());
@@ -58,9 +52,69 @@ function firework() {
 }
 
 
-/* Tự động bắn pháo hoa khi mở trang */
+/* ================= NHẠC SINH NHẬT ================= */
 
-window.onload = function() {
+const music = document.getElementById("birthdayMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+
+/* Tự phát nhạc khi người dùng click lần đầu */
+
+document.addEventListener("click", function () {
+
+    if (music.paused) {
+
+        music.play()
+            .then(() => {
+
+                if (musicBtn) {
+                    musicBtn.innerHTML = "🔇 Tắt nhạc";
+                }
+
+            })
+            .catch(() => {
+
+                console.log("Trình duyệt đang chặn tự động phát nhạc.");
+
+            });
+
+    }
+
+}, { once: true });
+
+
+/* Nút bật / tắt nhạc */
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play()
+            .then(() => {
+
+                musicBtn.innerHTML = "🔇 Tắt nhạc";
+
+            })
+            .catch(() => {
+
+                alert("Không phát được nhạc! Hãy kiểm tra file happy-birthday.mp3 nha.");
+
+            });
+
+    } else {
+
+        music.pause();
+
+        musicBtn.innerHTML = "🎵 Bật nhạc sinh nhật";
+
+    }
+
+}
+
+
+/* ================= KHI MỞ TRANG ================= */
+
+window.onload = function () {
 
     firework();
 

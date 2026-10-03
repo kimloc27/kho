@@ -14,19 +14,17 @@
 
     <div class="box">
 
-        <h1>🎉Chúc Mừng Sinh Nhật🎂</h1>
+    <h1>🎉 Chúc Mừng Sinh Nhật 🎂</h1>
 
-        <!-- Hình bánh sinh nhật -->
-        <img src="h2.webp" alt="Bánh sinh nhật">
+<img src="h2.webp" alt="Bánh sinh nhật">
 
-        <p>Chúc chế có một ngày thật vui vẻ,</p>
-        <p>Luôn hạnh phúc và thành công!</p>
+<p>Chúc m có một ngày sinh nhật thật vui vẻ! 💗</p>
+<p>Tuổi mới luôn hạnh phúc, may mắn và thành công nha! 🥳</p>
 
-        <!-- Nút mở popup -->
-        <button class="btn" onclick="showPopup()">
-            Nhấn vào đây 🎁
-        </button>
-
+<button class="btn" onclick="showPopup()">
+    Nhấn vào đây 🎁
+</button>
+        
     </div>
 
 
@@ -34,24 +32,25 @@
 
     <div class="popup" id="birthdayPopup">
 
-        <div class="popup-content">
+       <div class="popup-content">
 
-            <h2>💐 Chúc mừng sinh nhật 🎂</h2>
+    <h2>💐 Happy Birthday 🎂</h2>
 
-            <p>
-                Chúc chế sinh nhật vui vẻ 💐🎂<br>
-                Luôn luôn hạnh phúc 😚<br>
-                Và thật nhiều sức khoẻ 🤭<br>
-                Thành công trong cuốc sống 🫣<br>
-                Làm việc gì cũng suôn sẻ 😚
-            </p>
+    <p>
+        Chúc m sinh nhật vui vẻ nhaaa 🥳🎉<br>
+        Tuổi mới luôn vui vẻ, hạnh phúc 😚💗<br>
+        Ngày càng gặp nhiều may mắn 🍀<br>
+        Tiền vô như nước, tình bạn bền lâu 💸😂<br>
+        Làm gì cũng thuận lợi, thành công nhaaa ✨<br>
+        Mong mọi điều tốt đẹp nhất sẽ đến với m! 🫶🏻<br>
+        <b>Sinh nhật vui vẻ nha, bạn tui! 🎂🎁💖</b>
+    </p>
 
-            <!-- Nút đóng popup -->
-            <button class="close-btn" onclick="closePopup()">
-                Đóng
-            </button>
+    <button class="close-btn" onclick="closePopup()">
+        Đóng 💗
+    </button>
 
-        </div>
+</div>
 
     </div>
 
@@ -60,6 +59,16 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <!-- Kết nối file JavaScript -->
+     <!-- Nhạc sinh nhật -->
+<div class="music-box">
+    <button id="musicBtn" onclick="toggleMusic()">
+        🎵 Bật nhạc sinh nhật
+    </button>
+
+    <audio id="birthdayMusic" autoplay loop>
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+</audio>
+</div>
     <script src="script.js"></script>
 
 </body>

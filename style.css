@@ -111,21 +111,13 @@ img {
 /* Nội dung popup */
 
 .popup-content {
-    background: white;
-
-    /* Tự co trên điện thoại */
-    width: 100%;
-    max-width: 350px;
-
-    padding: 25px 20px;
-
-    border-radius: 20px;
-
+    width: 500px;
+    max-width: 90%;
+    padding: 35px 40px;
+    border-radius: 25px;
     text-align: center;
-
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-
-    animation: popup 0.4s ease;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -224,4 +216,28 @@ img {
         font-size: 16px;
     }
 
+}
+/* Nút nhạc sinh nhật */
+.music-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#musicBtn {
+    background: linear-gradient(135deg, #ff8fab, #ff5d8f);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 93, 143, 0.4);
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.05);
 }
